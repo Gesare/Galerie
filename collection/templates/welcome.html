@@ -17,7 +17,7 @@
        
 </script>
 <hr>
-<br>
+<br><br><br><br>
 <div class="container-fluid" style="background-color: rgb(248, 248, 255)">
 
   <div class="card-columns">
@@ -49,10 +49,10 @@
             <p class="card-text"> Location taken : {{image.image_location}}</p>
             <p class="card-text">Category : {{image.image_category}}</p>
             <hr>
-            <button type="button" class="btn btn-info" onclick="copy('img{{image.id}}')">Copy Link</button>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-info" data-dismiss="modal">CLOSE</button>
+             <button type="button" class="btn btn-info" onclick="copy('img{{image.id}}')">Copy Link</button>
 
         </div>
         </div>
