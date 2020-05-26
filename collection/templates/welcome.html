@@ -17,55 +17,62 @@
        
 </script>
 <hr>
-    <div class="row">
-            {% for image in images %}
-            <div class="card-deck">
-                <div class="col-xs-1 col-md-4 column">
-                <div class="card" style="width: 20rem;">
-                    <h3 class="text-center" >{{image.name}}</h3>
-                    <img class="card-img-top" src="{{image.pic.url}}" alt=" ">
-                    <div class="card-body">
-                    </div>
-                </div>
-                <br>
-                </div>
+<br>
+<div class="container-fluid" style="background-color: rgb(248, 248, 255)">
+
+  <div class="card-columns">
+        {% for image in images %}
+            <div class="card border-secondary">
+            <img class="card-img-top" class="img-responsive" src="{{image.pic.url}}" data-target="#extraModal{{image.id}}" data-toggle="modal" size="100px200">
             </div>
-            <div class="modal" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title edit" id="exampleModalCenteredLabel"> IMAGE : {{image.name}}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3 pics animation all 2">
-                                <img src="{{image.pic.url}}" alt="Image" class="img-width" style="width:100%">
-                            </div>
-                            <hr>
-                            <div>
-                                <p class="edit"> <strong>IMAGE DESCRIPTION:</strong>   </p>
-                                <hr>
-                                <p class="card-text">{{image.description}}.</p>
-                                <p class="card-text"> Location taken : {{image.image_location}}</p>
-                                <p class="card-text">Category : {{image.image_category}}</p>
-                               <button type="button" class="btn btn-info" onclick="copy('img{{image.id}}')">Copy Link</button>
-                            </div>
-                        </div>
-                    <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-info" onclick="copy('img{{image.id}}')">Copy Link</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+        {%endfor%}
+  </div>
+
 </div>
 
+<!-- Large modal -->
+{% for image in images %}
+
+    <!-- Modal -->
+    <div class="modal fade" id="extraModal{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="extra" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color: rgba(, 0, 0);">
+        <div class="modal-header">
+            <h5  class="modal-title" id="exampleModalLongTitle">Title: {{image.name}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+        </div>
+
+        <div class="modal-body">
+            <img class="card-img-top" class="img-responsive" src="{{image.pic.url}}" size="100px200">
+            <p class="card-text">Description of the photo :<hr><br> {{image.description}}.</p>
+            <p class="card-text"> Location taken : {{image.image_location}}</p>
+            <p class="card-text">Category : {{image.image_category}}</p>
+            <hr>
+            <button type="button" class="btn btn-info" onclick="copy('img{{image.id}}')">Copy Link</button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">CLOSE</button>
+
+        </div>
+        </div>
+    </div>
+    </div>
+    <script>
+    function copylink(value) {
+        console.log('hi yellow')
+        function handler(event){
+            event.clipboardData.setData('text/plain', value);
+            event.preventDefault();
+            document.removeEventListener('copy', handler, true);
+        }
+        document.addEventListener('copy', handler, true);
+        document.execCommand('copy');
+    }
+    </script>
+
+
+{%endfor%}
 {% endblock %}
 
 
