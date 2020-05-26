@@ -1,5 +1,5 @@
 """
-WSGI config for collection project.
+WSGI config for gallery project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "collection.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "gallery.settings")
 
 application = get_wsgi_application()
