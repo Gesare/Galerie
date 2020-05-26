@@ -7,8 +7,45 @@ This is a simple photo gallery web application to showcase beautiful pictures an
 
 
 ## Getting Started
+### Clone the Repo
+Run the following command on the terminal:
+`git clone https://github.com/Gesare/Galerie.git && cd Galerie`
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Activate virtual environment
+Activate virtual environment using python3.6 as default handler
+```bash
+virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
+```
+
+### Install dependancies
+Install dependancies that will create an environment for the app to run
+`pip3 install -r requirements.txt`
+
+### Create the Database
+```bash
+psql
+CREATE DATABASE Dbname;
+```
+### .env file
+Create .env file and paste paste the following filling where appropriate:
+```python
+SECRET_KEY = '<Secret_key>'
+DBNAME = '<Dbname>'
+USER = '<Username>'
+PASSWORD = '<password>'
+DEBUG = True
+```
+### Run initial Migration
+```bash
+python3.6 manage.py makemigrations album
+python3.6 manage.py migrate
+```
+
+### Run the app
+```bash
+python3.6 manage.py runserver
+```
+Open terminal on `localhost:8000`
 
 ### Prerequisites
 
@@ -16,10 +53,6 @@ These instructions will get you a copy of the project up and running on your loc
 2. Python3.6
 3. [Postgres](https://www.postgresql.org/download/)
 4. [python virtualenv](https://gist.github.com/Geoyi/d9fab4f609e9f75941946be45000632b)
-
-```
-Give examples
-```
 
 ### Installing
 
