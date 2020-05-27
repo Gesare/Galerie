@@ -57,7 +57,10 @@ Open terminal on `localhost:8000`
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+```bash
+python3.8 manage.py test collection
+
+```
 
 
 ## Deploying to heroku
