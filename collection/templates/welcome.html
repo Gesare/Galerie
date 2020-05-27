@@ -2,20 +2,7 @@
 {%extends 'base.html'%}
 {% load static %}%}
 {% block content %}
-    <script>
-   function copy(ids) {
-       var textCopied = document.getElementById(ids);
-       text = textCopied.src;
-       var elementary = document.createElement("input");
-       document.body.appendChild(elementary);
-       elementary.setAttribute('value', text);
-       elementary.select();
-       document.execCommand("copy");
-       document.body.removeChild(elementary);
-       alert("Copied: " + textCopied.src);
-       }
-       
-</script>
+    
 <hr>
 <br>
 <div class="container-fluid" style="background-color: rgb(248, 248, 255)">
@@ -58,18 +45,7 @@
         </div>
     </div>
     </div>
-    <script>
-    function copylink(value) {
-        console.log('hi yellow')
-        function handler(event){
-            event.clipboardData.setData('text/plain', value);
-            event.preventDefault();
-            document.removeEventListener('copy', handler, true);
-        }
-        document.addEventListener('copy', handler, true);
-        document.execCommand('copy');
-    }
-    </script>
+    
 
 
 {%endfor%}
