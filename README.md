@@ -54,48 +54,20 @@ Open terminal on `localhost:8000`
 3. [Postgres](https://www.postgresql.org/download/)
 4. [python virtualenv](https://gist.github.com/Geoyi/d9fab4f609e9f75941946be45000632b)
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deploying to heroku
 Refer to this guide: [deploying to heroku](https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html)
 
 Set the configuration to production mode
+
+## Live Demo
+
+The web app can be accessed from the following link: 
 
 ## Built With
 * Python
@@ -105,12 +77,6 @@ Set the configuration to production mode
 * CSS
 * Django
 * PostgreSQL Database
-
-
-## Live Demo
-
-The web app can be accessed from the following link: 
-
 
 
 ## License
