@@ -37,7 +37,7 @@ DEBUG = True
 ```
 ### Run initial Migration
 ```bash
-python3.6 manage.py makemigrations album
+python3.6 manage.py makemigrations collection
 python3.6 manage.py migrate
 ```
 
