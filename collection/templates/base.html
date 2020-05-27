@@ -15,7 +15,7 @@
 
   {% block styles %}
     {% bootstrap_css %}
-      <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+      <link rel="shortcut icon" href="{% static 'img/favicon.icon' %}" type="image/x-icon">
       <link rel="stylesheet" href="{% static 'css/base.css'%}">
   {% endblock %}
 
@@ -29,20 +29,6 @@
 
 
     {% block scripts %}
-      <script>
-     function copy(ids) {
-       var textCopied = document.getElementById(ids);
-       text = textCopied.src;
-       var elementary = document.createElement("input");
-       document.body.appendChild(elementary);
-       elementary.setAttribute('value', text);
-       elementary.select();
-       document.execCommand("copy");
-       document.body.removeChild(elementary);
-       alert("Copied: " + textCopied.src);
-       }
-       
-      </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      {% bootstrap_javascript %}
     {% endblock %}
