@@ -3,15 +3,11 @@ h3{
     text-align: center;
     font-size: 100%;
 }
-
 .details{
     padding: 0;
     overflow: hidden;
     box-shadow: 2px 4px 12px 2px #dcdcdc;
 }
-
-
-
 .search-section {
     padding-top: 4rem;
 }
