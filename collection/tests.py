@@ -9,10 +9,10 @@ class ImageTestClass(TestCase):
         self.category = Category(cat='Cars')
         self.category.save()
 
-        self.image_test = Image(description='this is a test instance',image_location=self.location,image_category=self.category)
+        self.image_test = Image(description='This is a test instance',image_location=self.location,image_category=self.category)
         self.image_test.save_image()
 
-        self.image_test1 = Image(description='this is a test instance',image_location=self.location,image_category=self.category)
+        self.image_test1 = Image(description='This is a test instance',image_location=self.location,image_category=self.category)
         self.image_test1.save_image()
 
     def test_instance(self):
