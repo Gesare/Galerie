@@ -15,5 +15,5 @@ six==1.15.0
 static3==0.7.0
 unicodecsv==0.14.1
 Unipath==1.1
-urllib3==1.25.9
+urllib3==1.26.5
 whitenoise==3.3.1
